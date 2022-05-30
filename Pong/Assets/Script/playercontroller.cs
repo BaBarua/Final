@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class playercontroller : MonoBehaviour
 {
     private Rigidbody2D player;
     // Start is called before the first frame update
@@ -15,9 +15,9 @@ public class NewBehaviourScript : MonoBehaviour
     void Update()
     {
         if (Input.GetKey(KeyCode.W)) {
-            player.velocity = new Vector2(0f, 2f);
+            player.velocity = new Vector2(0f, 5f);
         } else if (Input.GetKey(KeyCode.S)) {
-            player.velocity = new Vector2(0f, -2f);
+            player.velocity = new Vector2(0f, -5f);
         } else {
             player.velocity = new Vector2(0f, 0f);
         }

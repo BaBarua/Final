@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] private GameObject traget;
 
-    private float speed = 5.0f;
+    private float speed = 4.0f;
     
     void Start()
     {

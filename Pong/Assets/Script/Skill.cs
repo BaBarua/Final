@@ -4,18 +4,21 @@ using UnityEngine;
 
 public class Skill : MonoBehaviour
 {
-    
+    public float speed = 4.5f;
     void Start()
     {
 
     }
 
-    // Update is called once per frame
+    
+   
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
-        {
-           
-        }
+        transform.position += transform.right * Time.deltaTime * speed;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Destroy(gameObject);
     }
 }

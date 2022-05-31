@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Skill : MonoBehaviour
+public class SkillPTWO : MonoBehaviour
 {
     public float speed = 4.5f;
     void Start()
@@ -14,7 +14,7 @@ public class Skill : MonoBehaviour
 
     void Update()
     {
-        transform.position += transform.right * Time.deltaTime * speed;
+        transform.position += -transform.right * Time.deltaTime * speed;
     }
 
     private void OnTriggerEnter2D(Collider2D ball)

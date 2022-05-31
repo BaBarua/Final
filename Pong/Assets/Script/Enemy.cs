@@ -18,12 +18,12 @@ public class Enemy : MonoBehaviour
     {
         if (transform.position.y > traget.transform.position.y)
         {
-            transform.Translate(Vector3.down * Time.deltaTime * speed);
+            transform.Translate(Vector2.down * Time.deltaTime * speed);
         }
 
         if (transform.position.y < traget.transform.position.y)
         {
-            transform.Translate(Vector3.up * Time.deltaTime * speed);
+            transform.Translate(Vector2.up * Time.deltaTime * speed);
         }
     }
 

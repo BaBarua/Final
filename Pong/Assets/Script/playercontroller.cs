@@ -5,7 +5,7 @@ using UnityEngine;
 public class playercontroller : MonoBehaviour
 {
     private Rigidbody2D player;
-    public int cs;
+    public float cs;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +20,11 @@ public class playercontroller : MonoBehaviour
             player.velocity = new Vector2(0f, 5f);
         } else if (Input.GetKey(KeyCode.S)) {
             player.velocity = new Vector2(0f, -5f);
-        } else {
+        } else if (Input.GetKey(KeyCode.A))
+        {
+            cs = cs + 0.001f;
+        } else
+        {
             player.velocity = new Vector2(0f, 0f);
         }
 
@@ -30,7 +34,7 @@ public class playercontroller : MonoBehaviour
     {
         if (ball.tag == "ball")
         {
-            cs += 1;
+            cs = cs + 0.1f;
         }
 
     }

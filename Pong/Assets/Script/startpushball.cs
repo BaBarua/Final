@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ball_bounce : MonoBehaviour
+public class startpushball : MonoBehaviour
 {
     private Rigidbody2D rb;
     // Start is called before the first frame update

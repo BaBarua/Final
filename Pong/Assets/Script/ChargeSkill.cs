@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ChargeSkill : MonoBehaviour
 {
+
     public int cs;
     void Start()
     {
@@ -15,11 +17,11 @@ public class ChargeSkill : MonoBehaviour
     {
         Debug.Log(cs);
     }
-    private void OnTriggerEnter(Collider other)
+    private void OntriggerEnter2D(Collider2D ball)
     {
-        if (other.CompareTag("ball"))
+        if (ball.tag == "ball")
         {
-            cs++;
+            cs += 1;
         }
     }
 }

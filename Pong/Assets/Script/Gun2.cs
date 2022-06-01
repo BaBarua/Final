@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gun : MonoBehaviour
+public class Gun2 : MonoBehaviour
 {
 
-    public Skill sk;
+    public SkillPTWO sk;
     public Transform fireoff;
     public float cs;
     void Start()
@@ -19,7 +19,7 @@ public class Gun : MonoBehaviour
 
         Debug.Log(cs);
 
-        if (Input.GetKey(KeyCode.C))
+        if (Input.GetKey(KeyCode.RightShift))
         {
             if(cs >= 10 )
             {
@@ -29,7 +29,7 @@ public class Gun : MonoBehaviour
             }
             
         }
-        else if (Input.GetKey(KeyCode.A))
+        else if (Input.GetKey(KeyCode.RightArrow))
         {
             cs = cs + 0.001f;
         }

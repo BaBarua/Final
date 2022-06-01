@@ -5,20 +5,29 @@ using UnityEngine;
 public class Skill : MonoBehaviour
 {
     public float speed = 4.5f;
+    public GameObject traget;
+
     void Start()
-    {
-
-    }
-
-    
-   
+    { }
     void Update()
     {
         transform.position += transform.right * Time.deltaTime * speed;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(gameObject);
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            playertwocontroller movescript = GetComponent<playertwocontroller>();
+
+
+            movescript.canmove = false;
+
+
+
+            movescript.canmove = true;
+        }
     }
 }
+
+

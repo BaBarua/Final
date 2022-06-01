@@ -14,7 +14,7 @@ public class Skill : MonoBehaviour
         transform.position += transform.right * Time.deltaTime * speed;
     }
 
-    IEnumerable OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {

@@ -5,9 +5,11 @@ using UnityEngine;
 public class playercontroller : MonoBehaviour
 {
     private Rigidbody2D player;
+    public bool canmove;
     void Start()
     {
         player = this.GetComponent<Rigidbody2D>();
+        canmove = true;
         
        
     }
@@ -15,18 +17,31 @@ public class playercontroller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.W)) {
-            player.velocity = new Vector2(0f, 5f);
-        } 
-        else if (Input.GetKey(KeyCode.S)) {
-            player.velocity = new Vector2(0f, -5f);
-        } 
-        else
-        {
-            player.velocity = new Vector2(0f, 0f);
-        }
+
+        movecontroller();
 
         
+
     }
+
+    public void movecontroller()
+    {
+        if (canmove == true)
+        {
+            if (Input.GetKey(KeyCode.W))
+            {
+                player.velocity = new Vector2(0f, 5f);
+            }
+            else if (Input.GetKey(KeyCode.S))
+            {
+                player.velocity = new Vector2(0f, -5f);
+            }
+            else
+            {
+                player.velocity = new Vector2(0f, 0f);
+            }
+        }
+    }
+
 
 }

@@ -5,25 +5,40 @@ using UnityEngine;
 public class playertwocontroller : MonoBehaviour
 {
     private Rigidbody2D player;
+    public bool canmove;
     void Start()
     {
         player = this.GetComponent<Rigidbody2D>();
+        canmove = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.UpArrow))
+
+        movecontroller();
+
+        
+       
+    }
+
+    public void movecontroller()
+
+    {
+        if (canmove == true)
         {
-            player.velocity = new Vector2(0f, 5f);
-        }
-        else if (Input.GetKey(KeyCode.DownArrow))
-        {
-            player.velocity = new Vector2(0f, -5f);
-        }
-        else
-        {
-            player.velocity = new Vector2(0f, 0f);
+            if (Input.GetKey(KeyCode.UpArrow))
+            {
+                player.velocity = new Vector2(0f, 5f);
+            }
+            else if (Input.GetKey(KeyCode.DownArrow))
+            {
+                player.velocity = new Vector2(0f, -5f);
+            }
+            else
+            {
+                player.velocity = new Vector2(0f, 0f);
+            }
         }
     }
 }

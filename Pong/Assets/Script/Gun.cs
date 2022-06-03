@@ -5,7 +5,7 @@ using UnityEngine;
 public class Gun : MonoBehaviour
 {
 
-    public Skill sk;
+    public GameObject sk;
     public Transform fireoff;
     public float cs;
     void Start()
@@ -16,8 +16,6 @@ public class Gun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        Debug.Log(cs);
 
         if (Input.GetKey(KeyCode.C))
         {
